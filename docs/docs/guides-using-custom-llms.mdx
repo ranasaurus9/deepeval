@@ -358,7 +358,7 @@ This is because the `CustomMistral7B` model is implemented through HF `transform
 
 :::
 
-### `gemini-1.5-flash` through Vertex AI
+### `gemini-1.5-flash` through Google AI Studio
 
 Begin by installing the `instructor` package via pip:
 
@@ -373,6 +373,7 @@ import instructor
 
 from deepeval.models import DeepEvalBaseLLM
 
+genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 
 class CustomGeminiFlash(DeepEvalBaseLLM):
     def __init__(self):
